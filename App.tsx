@@ -10,11 +10,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 import Home from './components/Home/Home';
+import ShoppingLists from './components/ShoppingLists';
+import PrepareGuestList from './components/PrepareGuestList';
+import PlanBudget from './components/PlanBudget';
+import MakeNotes from './components/MakeNotes';
 import Sign from './components/Sign';
 import LoginForm from './components/LoginForm/LoginForm';
 import RegisterForm from './components/RegisterForm/RegisterForm';
 import Carousel from 'react-native-snap-carousel';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import Notepad from './components/MakeNotes';
 
 const Stack = createStackNavigator();
 
@@ -45,6 +50,26 @@ const App = () => {
       <Stack.Screen
        name="Home"
        component={Home}
+       options={{headerShown: false}}
+      />
+      <Stack.Screen
+       name="ShoppingList"
+       component={ShoppingLists}
+       options={{headerShown: false}}
+      />
+      <Stack.Screen
+       name="GuestList"
+       component={PrepareGuestList}
+       options={{headerShown: false}}
+      />
+      <Stack.Screen
+       name="PlanBudget"
+       component={PlanBudget}
+       options={{headerShown: false}}
+      />
+      <Stack.Screen
+       name="Notepad"
+       component={Notepad}
        options={{headerShown: false}}
       />
      </Stack.Navigator>
